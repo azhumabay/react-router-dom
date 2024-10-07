@@ -2,8 +2,8 @@ const users = [
   {
     id: 1,
     name: "John Doe",
-    login: "john.doe",
-    password: "password123",
+    login: "test",
+    password: "123",
     postList: [
       {
         id: 101,

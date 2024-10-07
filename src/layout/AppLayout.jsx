@@ -1,4 +1,4 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -9,19 +9,19 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
+import { useAuth } from "../context/AuthProvider";
 
 export default function AppLayout() {
+  const { setAuth } = useAuth();
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
-  const navigate = useNavigate();
-
   return (
     <>
-      <AppBar position="static" sx={{marginBottom: "50px"}}>
+      <AppBar position="static" sx={{ marginBottom: "50px" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -36,8 +36,8 @@ export default function AppLayout() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             React Router DOM
           </Typography>
-          <Button color="inherit" onClick={() => navigate("/login")}>
-            Login
+          <Button color="inherit" onClick={() => setAuth(false)}>
+            Logout
           </Button>
         </Toolbar>
       </AppBar>
