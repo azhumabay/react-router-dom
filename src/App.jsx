@@ -19,6 +19,7 @@ export default function App() {
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="/404" element={<Error />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </AuthProvider>
     </Container>
