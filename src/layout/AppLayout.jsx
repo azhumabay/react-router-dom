@@ -57,10 +57,10 @@ export default function AppLayout() {
           </MenuItem>
           <MenuItem
             component={Link}
-            to="/about"
+            to="/post-list"
             sx={{ padding: "20px", fontSize: "18px" }}
           >
-            About
+            User Posts
           </MenuItem>
           <MenuItem
             component={Link}
