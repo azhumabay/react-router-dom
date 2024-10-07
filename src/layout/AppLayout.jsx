@@ -21,7 +21,7 @@ export default function AppLayout() {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" sx={{marginBottom: "50px"}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -64,10 +64,10 @@ export default function AppLayout() {
           </MenuItem>
           <MenuItem
             component={Link}
-            to="/contacts"
+            to="/user-list"
             sx={{ padding: "20px", fontSize: "18px" }}
           >
-            Contacts
+            User List
           </MenuItem>
         </Box>
       </Drawer>
